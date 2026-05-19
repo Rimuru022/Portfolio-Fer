@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización de Pipeline ETL y BI — Fernando Perez Gonzalez</title>
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><img src="Logo.png" alt="Otomate Labs Logo" class="nav-logo-img"></a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#work" class="nav-link" data-i18n="nav.work">Work</a>
+                <a href="index.html#services" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="index.html#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+                <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </div>
+            <button class="lang-toggle" aria-label="Toggle language" data-i18n="nav.lang">ES</button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="index.html#work" class="mobile-link" data-i18n="nav.work">Work</a>
+            <a href="index.html#services" class="mobile-link" data-i18n="nav.services">Services</a>
+            <a href="index.html#skills" class="mobile-link" data-i18n="nav.skills">Skills</a>
+            <a href="index.html#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
+        </div>
+    </div>
+
+    <header class="project-hero">
+        <div class="project-hero-bg"></div>
+        <div class="project-hero-content" data-animate="fade-up" data-duration="900">
+            <a href="index.html#work" class="project-back" data-i18n="project.back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                Back to projects
+            </a>
+            <div class="project-tags"><span class="project-tag">Automation</span><span class="project-tag">BI</span><span class="project-tag">Data Engineering</span></div>
+            <h1 class="project-title" data-i18n="castrol.title">Automatización de Pipeline ETL y Business Intelligence</h1>
+            <p class="project-subtitle" data-i18n="castrol.subtitle">Automated ETL pipeline for SAP ERP data extraction, reducing reporting time by 80% and enabling monthly sales forecasting with +/- 15% accuracy.</p>
+        </div>
+    </header>
+
+    <main class="project-body">
+        <div class="project-body-inner" data-animate="fade-up" data-duration="900">
+            <div class="project-main">
+                <h2 data-i18n="project.challenge">The Challenge</h2>
+                <p data-i18n="castrol.ch1">El equipo de ventas comerciales dependía de procesos manuales ineficientes para la consolidación de datos. La extracción de archivos planos desde el ERP (SAP) y su posterior transformación y visualización en presentaciones de PowerPoint consumía múltiples días de trabajo a la semana.</p>
+                <div class="project-image">SAP ERP data extraction workflow</div>
+                <p data-i18n="castrol.ch2">Esta latencia en los datos impedía la toma de decisiones ágiles, aumentaba el riesgo de errores humanos y dificultaba la generación de pronósticos de ventas precisos para evitar quiebres de stock.</p>
+
+                <h2 data-i18n="project.built">What I Built</h2>
+                <p data-i18n="castrol.b1">Diseñé y desplegué un pipeline ETL (Extract, Transform, Load) automatizado:</p>
+                <ul>
+                    <li data-i18n="castrol.b.1">Flujos en Power Query para ingestar, limpiar y transformar exportaciones planas de SAP de manera programática</li>
+                    <li data-i18n="castrol.b.2">Dashboard interactivo en Power BI que centralizó tres fuentes de datos críticas</li>
+                    <li data-i18n="castrol.b.3">Enfoque modular con filtros granulares por SKU, distribuidor y temporalidad</li>
+                    <li data-i18n="castrol.b.4">Eliminación de reportes estáticos individuales en favor de una solución dinámica</li>
+                </ul>
+                <div class="project-image">Power BI dashboard with sales forecasting</div>
+
+                <h2 data-i18n="project.results">Results</h2>
+                <p data-i18n="castrol.r1">La automatización redujo el tiempo de ciclo de generación de reportes en un 80%, liberando decenas de horas semanales para el equipo. La disponibilidad de datos limpios permitió desarrollar modelos de pronóstico de ventas mensuales con una precisión sostenida de +/- 15%.</p>
+                <p data-i18n="castrol.r2">El sistema fue adoptado por más de 15 usuarios, a quienes capacité personalmente para asegurar la mantenibilidad a largo plazo de la solución.</p>
+
+                <h2 data-i18n="project.tools">Tools & Technologies</h2>
+                <ul><li>Power BI & Power Query (M Language)</li><li>SAP ERP (Extracción de datos)</li><li>Modelado de datos relacionales</li><li>Forecasting estadístico</li></ul>
+            </div>
+
+            <aside class="project-sidebar">
+                <div class="project-sidebar-card">
+                    <h3 class="project-sidebar-title" data-i18n="project.details">Project Details</h3>
+                    <div class="project-sidebar-item">
+                        <div class="project-sidebar-label" data-i18n="sidebar.client">Client</div>
+                        <div class="project-sidebar-value" data-i18n="castrol.client">Castrol (BP) - División CVO</div>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <div class="project-sidebar-label" data-i18n="sidebar.duration">Duration</div>
+                        <div class="project-sidebar-value" data-i18n="castrol.duration">6 months</div>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <div class="project-sidebar-label" data-i18n="sidebar.role">Role</div>
+                        <div class="project-sidebar-value" data-i18n="castrol.role">Data & Strategy Intern</div>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <div class="project-sidebar-label" data-i18n="sidebar.metric">Key Metric</div>
+                        <div class="project-metric-highlight" data-i18n="castrol.metricNum">80%</div>
+                        <div class="project-sidebar-value" data-i18n="castrol.metricLabel">Reduction in reporting time</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand"><img src="Logo.png" alt="Otomate Labs Logo" class="footer-logo-img"><p class="footer-tagline" data-i18n="footer.tagline">Automation that scales.</p></div>
+            <div class="footer-links">
+                <a href="index.html#work" class="footer-link" data-i18n="nav.work">Work</a>
+                <a href="index.html#services" class="footer-link" data-i18n="nav.services">Services</a>
+                <a href="index.html#contact" class="footer-link" data-i18n="nav.contact">Contact</a>
+            </div>
+            <span class="footer-copy" data-i18n="footer.copy">© 2026 Fernando Perez Gonzalez</span>
+        </div>
+    </footer>
+    <script src="i18n.js"></script>
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

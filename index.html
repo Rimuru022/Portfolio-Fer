@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Perez Gonzalez — Automation & Systems Engineer</title>
+    <meta name="description" content="Computer Science student graduating May 2027. Cloud infrastructure, business automation, and BI. Formerly Huawei and Castrol/BP.">
+    <link rel="icon" type="image/png" href="Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="Logo.png" alt="Otomate Labs Logo" class="nav-logo-img">
+            </a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#work" class="nav-link" data-i18n="nav.work">Work</a>
+                <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a>
+                <a href="#process" class="nav-link" data-i18n="nav.process">Process</a>
+                <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+            </div>
+            <button class="lang-toggle" aria-label="Toggle language">ES</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="#work" class="mobile-link" data-i18n="nav.work">Work</a>
+            <a href="#services" class="mobile-link" data-i18n="nav.services">Services</a>
+            <a href="#skills" class="mobile-link" data-i18n="nav.skills">Skills</a>
+            <a href="#process" class="mobile-link" data-i18n="nav.process">Process</a>
+            <a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+            <div class="hero-blob blob-3"></div>
+            <div class="hero-noise"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-lockup" data-animate="fade-up" data-duration="800" data-delay="0">
+                <span class="hero-label" data-i18n="hero.label">Fernando Perez Gonzalez</span>
+            </div>
+            <p class="hero-tagline" data-animate="fade-up" data-duration="800" data-delay="150" data-i18n="hero.tagline">Computer Systems Engineering Student</p>
+            <h1 class="hero-headline" data-animate="fade-up" data-duration="900" data-delay="300">
+                <span class="hero-line" data-i18n="hero.line1">I build systems that scale.</span>
+                <span class="hero-line gradient-text" data-i18n="hero.line2">You focus on growth.</span>
+            </h1>
+            <p class="hero-subline" data-animate="fade-up" data-duration="800" data-delay="500" data-i18n="hero.bio">
+                Computer Systems & Telecommunications Engineering student at Universidad Iberoamericana, graduating May 2027. I translate business needs into efficient technology solutions — from ETL pipeline automation for Fortune 500 companies to Zero Trust cloud architectures. Former Data & Strategy Intern at Castrol (BP) and Cloud Architecture Intern at Huawei Cloud.
+            </p>
+            <div class="hero-cta" data-animate="fade-up" data-duration="800" data-delay="700">
+                <a href="#work" class="btn btn-primary" data-i18n="hero.cta.work">View my work</a>
+                <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">Get in touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Strip -->
+    <section class="metrics">
+        <div class="metrics-inner" data-animate="fade-up" data-duration="800">
+            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="0">
+                <span class="metric-number" data-target="80%">80%</span>
+                <span class="metric-label" data-i18n="metric.reports">Reporting Time Reduction</span>
+            </div>
+            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="150">
+                <span class="metric-number" data-target="35%">35%</span>
+                <span class="metric-label" data-i18n="metric.costs">Cloud Cost Reduction</span>
+            </div>
+            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="300">
+                <span class="metric-number" data-target="15+">15+</span>
+                <span class="metric-label" data-i18n="metric.users">Users Trained & Onboarded</span>
+            </div>
+            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="450">
+                <span class="metric-number" data-target="0%">0%</span>
+                <span class="metric-label" data-i18n="metric.security">SQL Injection Rate</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By -->
+    <section class="trusted-by">
+        <div class="trusted-inner" data-animate="fade-up" data-duration="800">
+            <span class="trusted-label" data-i18n="trusted.label">Trusted by teams at</span>
+            <div class="trusted-logos">
+                <span class="trusted-logo" data-animate="fade-in" data-duration="600" data-delay="0">Huawei</span>
+                <span class="trusted-logo" data-animate="fade-in" data-duration="600" data-delay="100">Castrol</span>
+                <span class="trusted-logo" data-animate="fade-in" data-duration="600" data-delay="200">BP</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-inner">
+            <div class="section-header" data-animate="fade-up" data-duration="800">
+                <span class="section-tag" data-i18n="services.tag">What I Do</span>
+                <h2 class="section-heading" data-i18n="services.heading">End-to-end systems that actually work</h2>
+                <p class="section-sub" data-i18n="services.sub">From cloud architecture to automated workflows. I don't just write code; I design systems that solve business problems.</p>
+            </div>
+            <div class="services-grid" data-stagger="150">
+                <div class="service-card" data-stagger-child data-animate="fade-up-small">
+                    <div class="service-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="service-card-title" data-i18n="service.cloud.title">Cloud Architecture & FinOps</h3>
+                    <p class="service-card-desc" data-i18n="service.cloud.desc">Huawei Cloud solutions with cost optimization strategies. Serverless architectures that reduce compute costs by up to 35%.</p>
+                    <ul class="service-card-list">
+                        <li data-i18n="service.cloud.1">Huawei Cloud (ECS, OBS, FunctionGraph)</li>
+                        <li data-i18n="service.cloud.2">Serverless & containerized deployments</li>
+                        <li data-i18n="service.cloud.3">FinOps & cost optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card featured" data-stagger-child data-animate="fade-up-small">
+                    <div class="service-card-badge" data-i18n="service.auto.badge">Most requested</div>
+                    <div class="service-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3 class="service-card-title" data-i18n="service.auto.title">Process Automation & ETL</h3>
+                    <p class="service-card-desc" data-i18n="service.auto.desc">Automated pipelines that eliminate manual work. From SAP data extraction to real-time dashboards with Power BI and Power Query.</p>
+                    <ul class="service-card-list">
+                        <li data-i18n="service.auto.1">ETL pipeline design (Power Query, Python)</li>
+                        <li data-i18n="service.auto.2">n8n workflow automation</li>
+                        <li data-i18n="service.auto.3">SAP ERP integration</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-stagger-child data-animate="fade-up-small">
+                    <div class="service-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                    </div>
+                    <h3 class="service-card-title" data-i18n="service.bi.title">Business Intelligence & AI</h3>
+                    <p class="service-card-desc" data-i18n="service.bi.desc">Data pipelines, predictive forecasting (+/- 15% accuracy), and AI-powered assistants with enterprise-grade security.</p>
+                    <ul class="service-card-list">
+                        <li data-i18n="service.bi.1">Power BI dashboards & forecasting</li>
+                        <li data-i18n="service.bi.2">LLM integration (Text-to-SQL)</li>
+                        <li data-i18n="service.bi.3">Zero Trust security architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Work Section -->
+    <section class="work" id="work">
+        <div class="work-inner">
+            <div class="section-header" data-animate="fade-up" data-duration="800">
+                <span class="section-tag" data-i18n="work.pro.tag">Professional Work</span>
+                <h2 class="section-heading" data-i18n="work.pro.heading">Projects that prove the promise</h2>
+                <p class="section-sub" data-i18n="work.pro.sub">Real systems built for real companies. Every project includes metrics, tools used, and scope.</p>
+            </div>
+            <div class="work-grid" data-animate="fade-up" data-duration="900" data-stagger="200">
+                <a href="project-castrol.html" class="work-card-link" data-stagger-child>
+                    <article class="work-card">
+                        <div class="work-card-visual" style="--card-gradient-angle: 225deg;">
+                            <div class="work-card-gradient"></div>
+                            <div class="work-card-tags">
+                                <span class="work-card-tag">Automation</span>
+                                <span class="work-card-tag">BI</span>
+                                <span class="work-card-tag">Data Engineering</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-card-title" data-i18n="work.castrol.title">Automatización de Pipeline ETL y Business Intelligence</h3>
+                            <p class="work-card-desc" data-i18n="work.castrol.desc">Automated ETL pipeline for SAP ERP data extraction, reducing reporting time by 80% and enabling monthly sales forecasting with +/- 15% accuracy.</p>
+                            <div class="work-card-meta">
+                                <span class="work-card-metric" data-i18n="work.castrol.metric">80% time reduction</span>
+                                <span class="work-card-tech" data-i18n="work.castrol.tech">Power BI · Power Query · SAP</span>
+                            </div>
+                            <span class="work-card-arrow" data-i18n="work.castrol.cta">View case study →</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="project-huawei.html" class="work-card-link" data-stagger-child>
+                    <article class="work-card">
+                        <div class="work-card-visual">
+                            <div class="work-card-gradient"></div>
+                            <div class="work-card-tags">
+                                <span class="work-card-tag">Huawei Cloud</span>
+                                <span class="work-card-tag">AI</span>
+                                <span class="work-card-tag">Security</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-card-title" data-i18n="work.huawei.title">Asistente Text-to-SQL Seguro con LLMs</h3>
+                            <p class="work-card-desc" data-i18n="work.huawei.desc">AI assistant using Llama 3.1 for natural language to SQL translation with Zero Trust security architecture achieving 0% SQL injection rate.</p>
+                            <div class="work-card-meta">
+                                <span class="work-card-metric" data-i18n="work.huawei.metric">0% SQL injection rate</span>
+                                <span class="work-card-tech" data-i18n="work.huawei.tech">Llama 3.1 · GaussDB · RBAC</span>
+                            </div>
+                            <span class="work-card-arrow" data-i18n="work.huawei.cta">View case study →</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="project-homelab.html" class="work-card-link" data-stagger-child>
+                    <article class="work-card">
+                        <div class="work-card-visual" style="--card-gradient-angle: 315deg;">
+                            <div class="work-card-gradient"></div>
+                            <div class="work-card-tags">
+                                <span class="work-card-tag">Infrastructure</span>
+                                <span class="work-card-tag">ZTNA</span>
+                                <span class="work-card-tag">Networking</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-card-title" data-i18n="work.homelab.title">Arquitectura Zero Trust y Virtualización</h3>
+                            <p class="work-card-desc" data-i18n="work.homelab.desc">Homelab running on 4C/8GB hardware with Proxmox VE, Cloudflare Tunnels, and Zero Trust Network Access eliminating all port forwarding.</p>
+                            <div class="work-card-meta">
+                                <span class="work-card-metric" data-i18n="work.homelab.metric">100% port exposure eliminated</span>
+                                <span class="work-card-tech" data-i18n="work.homelab.tech">Proxmox · Cloudflare · Nginx</span>
+                            </div>
+                            <span class="work-card-arrow" data-i18n="work.homelab.cta">View case study →</span>
+                        </div>
+                    </article>
+                </a>
+                <a href="project-valedor.html" class="work-card-link" data-stagger-child>
+                    <article class="work-card">
+                        <div class="work-card-visual" style="--card-gradient-angle: 45deg;">
+                            <div class="work-card-gradient"></div>
+                            <div class="work-card-tags">
+                                <span class="work-card-tag">Software Engineering</span>
+                                <span class="work-card-tag">CRM</span>
+                                <span class="work-card-tag">Social Impact</span>
+                            </div>
+                        </div>
+                        <div class="work-card-content">
+                            <h3 class="work-card-title" data-i18n="work.valedor.title">Sistema de Gestión (CRM) a Medida para ONG</h3>
+                            <p class="work-card-desc" data-i18n="work.valedor.desc">Custom CRM plugin for Mi Valedor NGO built on WordPress, tracking beneficiaries, workshops, and sales — saving 10-20 admin hours per week.</p>
+                            <div class="work-card-meta">
+                                <span class="work-card-metric" data-i18n="work.valedor.metric">10-20 hrs saved/week</span>
+                                <span class="work-card-tech" data-i18n="work.valedor.tech">PHP · WordPress · RBAC</span>
+                            </div>
+                            <span class="work-card-arrow" data-i18n="work.valedor.cta">View case study →</span>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Professional Projects -->
+    <section class="work work-academic">
+        <div class="work-inner">
+            <div class="section-header" data-animate="fade-up" data-duration="800">
+                <span class="section-tag" data-i18n="work.extra.tag">More Professional Work</span>
+                <h2 class="section-heading" data-i18n="work.extra.heading">Additional projects</h2>
+                <p class="section-sub" data-i18n="work.extra.sub">Technical work that rounds out my professional experience.</p>
+            </div>
+            <div class="work-grid work-grid-compact" data-animate="fade-up" data-duration="900" data-stagger="200">
+                <article class="work-card work-card-compact" data-stagger-child data-animate="fade-up-small">
+                    <div class="work-card-content">
+                        <div class="work-card-tags-compact">
+                            <span class="work-card-tag-compact">Serverless</span>
+                            <span class="work-card-tag-compact">SIEM</span>
+                            <span class="work-card-tag-compact">Huawei Cloud</span>
+                        </div>
+                        <h3 class="work-card-title" data-i18n="work.siem.title">Integración Serverless SIEM vía OBS Logs</h3>
+                        <p class="work-card-desc" data-i18n="work.siem.desc">Event-driven architecture using Huawei Cloud FunctionGraph to ingest database audit logs into Splunk/Wazuh SIEMs with batch processing to reduce costs.</p>
+                        <div class="work-card-meta">
+                            <span class="work-card-tech" data-i18n="work.siem.tech">FunctionGraph · OBS · Splunk</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic & Other Projects Section -->
+    <section class="work work-academic" id="academic">
+        <div class="work-inner">
+            <div class="section-header" data-animate="fade-up" data-duration="800">
+                <span class="section-tag" data-i18n="work.aca.tag">Academic & Personal Projects</span>
+                <h2 class="section-heading" data-i18n="work.aca.heading">Learning by building</h2>
+                <p class="section-sub" data-i18n="work.aca.sub">University projects and independent work that shaped my approach to problem-solving.</p>
+            </div>
+            <div class="work-grid work-grid-compact" data-animate="fade-up" data-duration="900" data-stagger="200">
+                <article class="work-card work-card-compact" data-stagger-child data-animate="fade-up-small">
+                    <div class="work-card-content">
+                        <div class="work-card-tags-compact">
+                            <span class="work-card-tag-compact">n8n</span>
+                            <span class="work-card-tag-compact">OSINT</span>
+                            <span class="work-card-tag-compact">Automation</span>
+                        </div>
+                        <h3 class="work-card-title">Orquestación Empresarial y OSINT</h3>
+                        <p class="work-card-desc">n8n workflow for inventory management with Google Sheets. OSINT pipeline using Apify for lead extraction and Perplexity API for hyper-personalized outreach.</p>
+                        <div class="work-card-meta">
+                            <span class="work-card-tech">n8n · Apify · Perplexity API</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="work-card work-card-compact" data-stagger-child data-animate="fade-up-small">
+                    <div class="work-card-content">
+                        <div class="work-card-tags-compact">
+                            <span class="work-card-tag-compact">Web Dev</span>
+                            <span class="work-card-tag-compact">University</span>
+                        </div>
+                        <h3 class="work-card-title">University Management System</h3>
+                        <p class="work-card-desc">Full-stack web application for course registration, grade tracking, and student-faculty communication built during university coursework.</p>
+                        <div class="work-card-meta">
+                            <span class="work-card-tech">JavaScript · Node.js · SQL</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="skills-inner">
+            <div class="section-header" data-animate="fade-up" data-duration="800">
+                <span class="section-tag" data-i18n="skills.tag">Capabilities</span>
+                <h2 class="section-heading" data-i18n="skills.heading">What I bring to the table</h2>
+            </div>
+            <div class="skills-grid" data-stagger="150">
+                <div class="skills-category" data-stagger-child data-animate="fade-up-small">
+                    <h3 class="skills-cat-title" data-i18n="skills.cloud.title">Cloud & Architecture</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Huawei Cloud</span>
+                        <span class="skill-item">ECS / OBS / FunctionGraph</span>
+                        <span class="skill-item">RDS / GaussDB</span>
+                        <span class="skill-item">Serverless Computing</span>
+                        <span class="skill-item">FinOps</span>
+                        <span class="skill-item">Zero Trust (ZTNA)</span>
+                        <span class="skill-item">Docker / LXC</span>
+                        <span class="skill-item">Proxmox VE</span>
+                    </div>
+                </div>
+                <div class="skills-category" data-stagger-child data-animate="fade-up-small">
+                    <h3 class="skills-cat-title" data-i18n="skills.data.title">Data & BI</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Power Query (M)</span>
+                        <span class="skill-item">SAP ERP / SAP Fiori</span>
+                        <span class="skill-item">SQL (MySQL, PostgreSQL)</span>
+                        <span class="skill-item">Python (pandas)</span>
+                        <span class="skill-item">Data Modeling</span>
+                        <span class="skill-item">Forecasting</span>
+                        <span class="skill-item">ETL Pipelines</span>
+                    </div>
+                </div>
+                <div class="skills-category" data-stagger-child data-animate="fade-up-small">
+                    <h3 class="skills-cat-title" data-i18n="skills.auto.title">Automation & Dev</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">n8n</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">JavaScript / TypeScript</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">Apify</span>
+                    </div>
+                </div>
+                <div class="skills-category" data-stagger-child data-animate="fade-up-small">
+                    <h3 class="skills-cat-title" data-i18n="skills.soft.title">Soft Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-item" data-i18n="skill.communication">Technical Communication</span>
+                        <span class="skill-item" data-i18n="skill.incident">Incident Management (ITIL/SLA)</span>
+                        <span class="skill-item" data-i18n="skill.training">User Training & Enablement</span>
+                        <span class="skill-item" data-i18n="skill.adaptability">Adaptability</span>
+                        <span class="skill-item" data-i18n="skill.learning">Continuous Learning</span>
+                        <span class="skill-item" data-i18n="skill.client">Client Relations</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="process-inner">
+            <div class="section-header" data-animate="fade-up" data-duration="800">
+                <span class="section-tag" data-i18n="process.tag">How I Work</span>
+                <h2 class="section-heading" data-i18n="process.heading">A process built for results</h2>
+                <p class="section-sub" data-i18n="process.sub">No surprises. No scope creep. Just systems that work.</p>
+            </div>
+            <div class="process-steps" data-stagger="120">
+                <div class="process-step" data-stagger-child data-animate="slide-right">
+                    <span class="process-number">01</span>
+                    <h3 class="process-title" data-i18n="process.1.title">Discovery</h3>
+                    <p class="process-desc" data-i18n="process.1.desc">I analyze your current workflow, identify bottlenecks, and define what success looks like with clear metrics.</p>
+                </div>
+                <div class="process-step" data-stagger-child data-animate="slide-right">
+                    <span class="process-number">02</span>
+                    <h3 class="process-title" data-i18n="process.2.title">Design</h3>
+                    <p class="process-desc" data-i18n="process.2.desc">Architecture and automation design tailored to your stack. No one-size-fits-all templates.</p>
+                </div>
+                <div class="process-step" data-stagger-child data-animate="slide-right">
+                    <span class="process-number">03</span>
+                    <h3 class="process-title" data-i18n="process.3.title">Build</h3>
+                    <p class="process-desc" data-i18n="process.3.desc">Clean, documented code with regular updates. You see progress, not just promises.</p>
+                </div>
+                <div class="process-step" data-stagger-child data-animate="slide-right">
+                    <span class="process-number">04</span>
+                    <h3 class="process-title" data-i18n="process.4.title">Deploy & Optimize</h3>
+                    <p class="process-desc" data-i18n="process.4.desc">Smooth handoff with documentation. I stay available for tweaks and optimizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <div class="tech-inner">
+            <div data-animate="fade-up" data-duration="800">
+                <span class="section-tag center" data-i18n="tech.tag">Tech Stack</span>
+                <h2 class="section-heading center" data-i18n="tech.heading">Tools I use to build</h2>
+            </div>
+            <div class="tech-grid" data-stagger="80">
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Python</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Power BI</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Power Query</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">SAP ERP</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Huawei Cloud</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">n8n</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">SQL</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Docker</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Proxmox VE</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Cloudflare</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Node.js</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect / Social Section -->
+    <section class="connect" id="connect">
+        <div class="connect-inner" data-animate="fade-up" data-duration="900">
+            <div class="connect-content">
+                <span class="section-tag center" data-i18n="connect.tag">Let's Connect</span>
+                <p class="connect-text" data-i18n="connect.text">
+                    I regularly share insights about automation, cloud infrastructure, and business intelligence on LinkedIn. Always open to interesting conversations about tech, entrepreneurship, and how automation can transform businesses.
+                </p>
+                <div class="connect-links">
+                    <a href="https://www.linkedin.com/in/fernandopgonzalez" target="_blank" class="connect-social">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <span data-i18n="connect.linkedin">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-inner" data-animate="fade-up" data-duration="900">
+            <div class="contact-content">
+                <h2 class="contact-heading" data-i18n="contact.heading">Let's build something together</h2>
+                <p class="contact-subline" data-i18n="contact.sub">Open to remote opportunities and automation consulting. Based in Mexico City, working worldwide.</p>
+                <div class="contact-actions">
+                    <a href="mailto:businesscontact@otomatelabs.com" class="btn btn-primary btn-large" data-i18n="contact.email">businesscontact@otomatelabs.com</a>
+                    <a href="https://cal.com/ferpg/discovery" target="_blank" class="btn btn-ghost btn-large" data-i18n="contact.call">Book a call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner" data-animate="fade-up" data-duration="600">
+            <div class="footer-brand">
+                <img src="Logo.png" alt="Otomate Labs Logo" class="footer-logo-img">
+                <p class="footer-tagline" data-i18n="footer.tagline">Automation that scales.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#work" class="footer-link" data-i18n="nav.work">Work</a>
+                <a href="#services" class="footer-link" data-i18n="nav.services">Services</a>
+                <a href="#skills" class="footer-link" data-i18n="nav.skills">Skills</a>
+                <a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a>
+            </div>
+            <span class="footer-copy" data-i18n="footer.copy">© 2026 Fernando Perez Gonzalez</span>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
