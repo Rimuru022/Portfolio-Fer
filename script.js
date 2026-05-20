@@ -1,5 +1,5 @@
 /**
- * Navigation scroll behavior and mobile menu
+ * Navigation scroll behavior, mobile menu, and active section tracking
  */
 
 (function() {
@@ -15,7 +15,6 @@
     function updateNav() {
         const scrollY = window.scrollY;
         
-        // Add subtle background opacity change based on scroll
         if (scrollY > 50) {
             nav.style.background = 'rgba(14, 12, 20, 0.95)';
         } else {
@@ -31,6 +30,61 @@
             ticking = true;
         }
     });
+    
+    // Scroll-spy: highlight nav link for visible section
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = [];
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#') return;
+        const section = document.querySelector(href);
+        if (section) {
+            sections.push({ link, section });
+        }
+    });
+    
+    if (sections.length) {
+        let spyTicking = false;
+        
+        function updateActiveLink() {
+            const scrollY = window.scrollY + window.innerHeight / 3; // upper third bias
+            
+            let activeSection = null;
+            let minDistance = Infinity;
+            
+            sections.forEach(({ link, section }) => {
+                const rect = section.getBoundingClientRect();
+                const sectionTop = rect.top + window.scrollY;
+                const distance = Math.abs(scrollY - sectionTop);
+                
+                if (scrollY >= sectionTop && distance < minDistance) {
+                    minDistance = distance;
+                    activeSection = link;
+                }
+            });
+            
+            // Also check if we're near the top (hero is visible)
+            if (window.scrollY < 300) {
+                activeSection = null; // no active link when hero is visible
+            }
+            
+            sections.forEach(({ link }) => {
+                link.classList.toggle('active', link === activeSection);
+            });
+            
+            spyTicking = false;
+        }
+        
+        window.addEventListener('scroll', function() {
+            if (!spyTicking) {
+                window.requestAnimationFrame(updateActiveLink);
+                spyTicking = true;
+            }
+        });
+        
+        updateActiveLink();
+    }
     
     // Mobile hamburger menu
     if (hamburger && mobileMenu) {
@@ -50,7 +104,6 @@
             }
         });
         
-        // Close menu when clicking a link
         mobileLinks.forEach(link => {
             link.addEventListener('click', function() {
                 mobileMenu.classList.remove('active');
@@ -60,7 +113,6 @@
             });
         });
         
-        // Close menu on escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
                 mobileMenu.classList.remove('active');
@@ -88,6 +140,5 @@
         });
     });
     
-    // Initial check
     updateNav();
 })();
