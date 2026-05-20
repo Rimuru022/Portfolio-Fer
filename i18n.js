@@ -12,7 +12,7 @@ const i18n = {
         'hero.label': 'Fernando Perez Gonzalez',
         'hero.tagline': 'Computer Systems Engineering Student',
         'hero.line1': 'I build systems that scale.',
-        'hero.line2': 'You focus on growth.',
+        'hero.line2': 'To help you grow.',
         'hero.bio': "Computer Systems & Telecommunications Engineering student at Universidad Iberoamericana, graduating May 2027. I translate business needs into efficient technology solutions — from ETL pipeline automation for Fortune 500 companies to Zero Trust cloud architectures. Former Data & Strategy Intern at Castrol (BP) and Cloud Architecture Intern at Huawei Cloud.",
         'hero.cta.work': 'View my work', 'hero.cta.contact': 'Get in touch',
 
@@ -222,7 +222,7 @@ const i18n = {
         'hero.label': 'Fernando Perez Gonzalez',
         'hero.tagline': 'Estudiante de Ingeniería en Sistemas',
         'hero.line1': 'Construyo sistemas que escalan.',
-        'hero.line2': 'Tú enfócate en crecer.',
+        'hero.line2': 'Para ayudarte a crecer.',
         'hero.bio': "Estudiante de Ingeniería en Sistemas de Cómputo y Telecomunicaciones en la Universidad Iberoamericana, graduándome en mayo de 2027. Traduzco necesidades de negocio en soluciones tecnológicas eficientes — desde automatización de pipelines ETL para Fortune 500 hasta arquitecturas cloud Zero Trust. Ex becario de Datos y Estrategia en Castrol (BP) y Arquitectura Cloud en Huawei Cloud.",
         'hero.cta.work': 'Ver mis proyectos', 'hero.cta.contact': 'Contactarme',
 

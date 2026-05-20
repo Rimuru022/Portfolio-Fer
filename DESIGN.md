@@ -6,13 +6,17 @@ A dark-themed, committed-color portfolio for a cloud/automation/BI engineer. The
 
 ## Theme
 
-**Dark mode** (default). The primary scene: a recruiter or prospective client opening their laptop in a coffee shop, scanning quickly for credibility signals. The dark surface reduces eye strain and lets the gradient brand colors punch through with authority.
+**Dark mode** (default) with **light/cream toggle**. The primary scene: a recruiter or prospective client opening their laptop in a coffee shop, scanning quickly for credibility signals (dark). Daytime office review switches to a warm cream palette. The theme toggle persists via localStorage and respects `prefers-color-scheme` on first visit.
+
+**Scene (dark)**: Recruiter scanning at 9pm on a laptop in a dim room. The dark surface reduces eye strain.
+
+**Scene (light)**: Client reviewing the portfolio mid-afternoon in a bright office. The cream palette feels like premium letterhead — warm, approachable, professional.
 
 ## Color
 
-### Strategy: Full Palette
+### Strategy: Full Palette, Dual Theme
 
-Three brand colors (coral, magenta, violet) form a gradient identity derived from the logo. Magenta serves as the primary accent; coral and violet provide variation across metrics, process numbers, and card highlights. Dark neutrals are tinted toward violet (hue 300) at low chroma.
+Three brand colors (coral, magenta, violet) used as solid accents. Two complete palettes: dark (deep violet-tinted neutrals at ~8% lightness) and light cream (warm ivory neutrals tinted toward hue 85/90). The theme toggle switches between them seamlessly.
 
 ### Palette (OKLCH)
 

@@ -1,8 +1,41 @@
 /**
- * Navigation scroll behavior, mobile menu, and active section tracking
+ * Theme toggle, navigation scroll behavior, mobile menu, and active section tracking
  */
 
 (function() {
+    // ── Theme toggle ──
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const STORAGE_KEY = 'portfolio-theme';
+    
+    function getTheme() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored === 'light' || stored === 'dark') return stored;
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            html.setAttribute('data-theme', 'light');
+        } else {
+            html.removeAttribute('data-theme');
+        }
+    }
+    
+    function toggleTheme() {
+        const current = getTheme();
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(STORAGE_KEY, next);
+        applyTheme(next);
+    }
+    
+    applyTheme(getTheme());
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // ── Navigation ──
     const nav = document.getElementById('nav');
     const hamburger = document.getElementById('nav-hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -14,13 +47,11 @@
     
     function updateNav() {
         const scrollY = window.scrollY;
-        
         if (scrollY > 50) {
-            nav.style.background = 'rgba(14, 12, 20, 0.95)';
+            nav.classList.add('scrolled');
         } else {
-            nav.style.background = 'rgba(18, 16, 24, 0.8)';
+            nav.classList.remove('scrolled');
         }
-        
         ticking = false;
     }
     
