@@ -68,27 +68,15 @@
                 <a href="#work" class="btn btn-primary" data-i18n="hero.cta.work">View my work</a>
                 <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.contact">Get in touch</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Metrics Strip -->
-    <section class="metrics">
-        <div class="metrics-inner" data-animate="fade-up" data-duration="800">
-            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="0">
-                <span class="metric-number" data-target="80%">80%</span>
-                <span class="metric-label" data-i18n="metric.reports">Reporting Time Reduction</span>
-            </div>
-            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="150">
-                <span class="metric-number" data-target="35%">35%</span>
-                <span class="metric-label" data-i18n="metric.costs">Cloud Cost Reduction</span>
-            </div>
-            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="300">
-                <span class="metric-number" data-target="15+">15+</span>
-                <span class="metric-label" data-i18n="metric.users">Users Trained & Onboarded</span>
-            </div>
-            <div class="metric" data-animate="scale-in" data-duration="700" data-delay="450">
-                <span class="metric-number" data-target="0%">0%</span>
-                <span class="metric-label" data-i18n="metric.security">SQL Injection Rate</span>
+            <div class="hero-metrics" data-animate="fade-up" data-duration="800" data-delay="900">
+                <div class="hero-metric-item">
+                    <span class="hero-metric-value" data-target="80%">80%</span>
+                    <span class="hero-metric-label" data-i18n="metric.reports">Reporting Time Reduction</span>
+                </div>
+                <div class="hero-metric-item">
+                    <span class="hero-metric-value" data-target="35%">35%</span>
+                    <span class="hero-metric-label" data-i18n="metric.costs">Cloud Cost Reduction</span>
+                </div>
             </div>
         </div>
     </section>
@@ -166,7 +154,7 @@
             <div class="work-grid" data-animate="fade-up" data-duration="900" data-stagger="200">
                 <a href="project-castrol.html" class="work-card-link" data-stagger-child>
                     <article class="work-card">
-                        <div class="work-card-visual" style="--card-solid-color: oklch(20% 0.07 330);">
+                        <div class="work-card-visual">
                             <div class="work-card-gradient"></div>
                             <div class="work-card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
@@ -190,7 +178,7 @@
                 </a>
                 <a href="project-huawei.html" class="work-card-link" data-stagger-child>
                     <article class="work-card">
-                        <div class="work-card-visual" style="--card-solid-color: oklch(18% 0.06 280);">
+                        <div class="work-card-visual">
                             <div class="work-card-gradient"></div>
                             <div class="work-card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 7.07 17.07"/><path d="M12 22A10 10 0 0 1 4.93 7"/><circle cx="12" cy="12" r="3"/><line x1="8" y1="8" x2="8.01" y2="8"/><line x1="16" y1="16" x2="16.01" y2="16"/></svg>
@@ -214,7 +202,7 @@
                 </a>
                 <a href="project-homelab.html" class="work-card-link" data-stagger-child>
                     <article class="work-card">
-                        <div class="work-card-visual" style="--card-solid-color: oklch(16% 0.05 30);">
+                        <div class="work-card-visual">
                             <div class="work-card-gradient"></div>
                             <div class="work-card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/><line x1="10" y1="6" x2="22" y2="6"/><line x1="10" y1="18" x2="22" y2="18"/></svg>
@@ -238,7 +226,7 @@
                 </a>
                 <a href="project-valedor.html" class="work-card-link" data-stagger-child>
                     <article class="work-card">
-                        <div class="work-card-visual" style="--card-solid-color: oklch(17% 0.05 330);">
+                        <div class="work-card-visual">
                             <div class="work-card-gradient"></div>
                             <div class="work-card-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -264,13 +252,12 @@
         </div>
     </section>
 
-    <!-- Additional Professional Projects -->
-    <section class="work work-academic">
+    <!-- Additional Projects -->
+    <section class="work work-academic" id="academic">
         <div class="work-inner">
             <div class="section-header" data-animate="fade-up" data-duration="800">
-                <span class="section-tag" data-i18n="work.extra.tag">More Professional Work</span>
-                <h2 class="section-heading" data-i18n="work.extra.heading">Additional projects</h2>
-                <p class="section-sub" data-i18n="work.extra.sub">Technical work that rounds out my professional experience.</p>
+                <span class="section-tag" data-i18n="work.extra2.tag">Additional Projects</span>
+                <h2 class="section-heading" data-i18n="work.extra2.heading">More work worth mentioning</h2>
             </div>
             <div class="work-grid work-grid-compact" data-animate="fade-up" data-duration="900" data-stagger="200">
                 <article class="work-card work-card-compact" data-stagger-child data-animate="fade-up-small">
@@ -287,19 +274,6 @@
                         </div>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Academic & Other Projects Section -->
-    <section class="work work-academic" id="academic">
-        <div class="work-inner">
-            <div class="section-header" data-animate="fade-up" data-duration="800">
-                <span class="section-tag" data-i18n="work.aca.tag">Academic & Personal Projects</span>
-                <h2 class="section-heading" data-i18n="work.aca.heading">Learning by building</h2>
-                <p class="section-sub" data-i18n="work.aca.sub">University projects and independent work that shaped my approach to problem-solving.</p>
-            </div>
-            <div class="work-grid work-grid-compact" data-animate="fade-up" data-duration="900" data-stagger="200">
                 <article class="work-card work-card-compact" data-stagger-child data-animate="fade-up-small">
                     <div class="work-card-content">
                         <div class="work-card-tags-compact">
@@ -331,7 +305,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills & Tools -->
     <section class="skills" id="skills">
         <div class="skills-inner">
             <div class="section-header" data-animate="fade-up" data-duration="800">
@@ -390,6 +364,20 @@
                     </div>
                 </div>
             </div>
+            <div class="tech-grid" data-stagger="60" style="margin-top: var(--space-12);">
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Python</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Power BI</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Power Query</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">SAP ERP</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Huawei Cloud</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">n8n</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">SQL</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Docker</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Proxmox VE</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Cloudflare</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Node.js</span>
+                <span class="tech-item" data-stagger-child data-animate="scale-in">Linux</span>
+            </div>
         </div>
     </section>
 
@@ -422,30 +410,6 @@
                     <h3 class="process-title" data-i18n="process.4.title">Deploy & Optimize</h3>
                     <p class="process-desc" data-i18n="process.4.desc">Smooth handoff with documentation. I stay available for tweaks and optimizations.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack -->
-    <section class="tech-stack">
-        <div class="tech-inner">
-            <div data-animate="fade-up" data-duration="800">
-                <span class="section-tag center" data-i18n="tech.tag">Tech Stack</span>
-                <h2 class="section-heading center" data-i18n="tech.heading">Tools I use to build</h2>
-            </div>
-            <div class="tech-grid" data-stagger="80">
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Python</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Power BI</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Power Query</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">SAP ERP</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Huawei Cloud</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">n8n</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">SQL</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Docker</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Proxmox VE</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Cloudflare</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Node.js</span>
-                <span class="tech-item" data-stagger-child data-animate="scale-in">Linux</span>
             </div>
         </div>
     </section>

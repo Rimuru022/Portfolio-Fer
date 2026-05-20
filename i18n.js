@@ -64,6 +64,7 @@ const i18n = {
         // Extra professional
         'work.extra.tag': 'More Professional Work', 'work.extra.heading': 'Additional projects',
         'work.extra.sub': 'Technical work that rounds out my professional experience.',
+        'work.extra2.tag': 'Additional Projects', 'work.extra2.heading': 'More work worth mentioning',
         'work.siem.title': 'Serverless SIEM Integration via OBS Logs',
         'work.siem.desc': 'Event-driven architecture using Huawei Cloud FunctionGraph to ingest database audit logs into Splunk/Wazuh SIEMs with batch processing to reduce costs.',
         'work.siem.tech': 'FunctionGraph · OBS · Splunk',
@@ -274,6 +275,7 @@ const i18n = {
         // Extra professional
         'work.extra.tag': 'Más Trabajo Profesional', 'work.extra.heading': 'Proyectos adicionales',
         'work.extra.sub': 'Trabajo técnico que complementa mi experiencia profesional.',
+        'work.extra2.tag': 'Proyectos Adicionales', 'work.extra2.heading': 'Más trabajo que vale la pena mencionar',
         'work.siem.title': 'Integración Serverless SIEM vía OBS Logs',
         'work.siem.desc': 'Arquitectura orientada a eventos con FunctionGraph de Huawei Cloud para ingestar logs de auditoría de bases de datos hacia SIEMs Splunk/Wazuh con procesamiento batch para reducir costos.',
         'work.siem.tech': 'FunctionGraph · OBS · Splunk',

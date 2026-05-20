@@ -5,12 +5,12 @@
 :root {
     /* Core dark background, tinted violet */
     --color-bg: oklch(8% 0.015 300);
-    --color-bg-elevated: oklch(11% 0.018 300);
-    --color-surface: oklch(14% 0.022 300);
-    --color-surface-raised: oklch(18% 0.025 300);
-    --color-surface-hover: oklch(22% 0.03 300);
-    --color-border: oklch(24% 0.03 300);
-    --color-border-subtle: oklch(18% 0.02 300);
+    --color-bg-elevated: oklch(14% 0.02 300);
+    --color-surface: oklch(17% 0.025 300);
+    --color-surface-raised: oklch(22% 0.03 300);
+    --color-surface-hover: oklch(26% 0.035 300);
+    --color-border: oklch(28% 0.04 300);
+    --color-border-subtle: oklch(20% 0.025 300);
 
     /* Text — warm tinted whites */
     --color-text-primary: oklch(95% 0.005 60);
@@ -18,15 +18,20 @@
     --color-text-tertiary: oklch(55% 0.015 300);
     --color-text-muted: oklch(42% 0.015 300);
 
-    /* Brand colors — solid palette from Logo.png */
+    /* Brand colors — warm coral-led palette */
     --color-brand-coral: oklch(72% 0.18 30);
-    --color-brand-magenta: oklch(62% 0.2 330);
-    --color-brand-violet: oklch(58% 0.18 280);
+    --color-brand-warm: oklch(58% 0.14 25);
+    --color-brand-violet: oklch(48% 0.08 300);
 
-    --color-brand: var(--color-brand-magenta);
-    --color-brand-light: oklch(75% 0.15 330);
-    --color-brand-dark: oklch(48% 0.18 330);
-    --color-brand-bg: oklch(15% 0.06 330);
+    --color-brand: var(--color-brand-warm);
+    --color-brand-light: oklch(78% 0.1 30);
+    --color-brand-dark: oklch(38% 0.08 25);
+    --color-brand-bg: oklch(16% 0.04 25);
+
+    /* Brand block backgrounds (metrics, connect) */
+    --color-accent-block: oklch(18% 0.05 20);
+    --color-accent-block-text: oklch(96% 0.005 60);
+    --color-accent-block-sub: oklch(78% 0.03 30);
 
     /* Typography */
     --font-display: 'Sora', system-ui, sans-serif;
@@ -64,7 +69,7 @@
     --radius-pill: 9999px;
 
     /* Divider */
-    --divider: 1px solid oklch(22% 0.02 300);
+    --divider: 1px solid oklch(24% 0.025 300);
 }
 
 /* ========================================
@@ -73,12 +78,12 @@
 
 [data-theme="light"] {
     --color-bg: oklch(97.5% 0.006 90);
-    --color-bg-elevated: oklch(95% 0.01 90);
-    --color-surface: oklch(92% 0.012 85);
-    --color-surface-raised: oklch(88% 0.015 85);
-    --color-surface-hover: oklch(84% 0.018 85);
-    --color-border: oklch(82% 0.02 85);
-    --color-border-subtle: oklch(88% 0.012 85);
+    --color-bg-elevated: oklch(92% 0.012 85);
+    --color-surface: oklch(95% 0.008 88);
+    --color-surface-raised: oklch(90% 0.015 85);
+    --color-surface-hover: oklch(86% 0.02 85);
+    --color-border: oklch(78% 0.025 85);
+    --color-border-subtle: oklch(86% 0.015 85);
 
     --color-text-primary: oklch(14% 0.02 85);
     --color-text-secondary: oklch(32% 0.03 85);
@@ -86,13 +91,17 @@
     --color-text-muted: oklch(60% 0.02 85);
 
     --color-brand-coral: oklch(56% 0.18 30);
-    --color-brand-magenta: oklch(46% 0.2 330);
-    --color-brand-violet: oklch(42% 0.16 280);
-    --color-brand-light: oklch(60% 0.15 330);
-    --color-brand-dark: oklch(36% 0.18 330);
-    --color-brand-bg: oklch(88% 0.06 30);
+    --color-brand-warm: oklch(48% 0.15 25);
+    --color-brand-violet: oklch(38% 0.08 300);
+    --color-brand-light: oklch(62% 0.12 30);
+    --color-brand-dark: oklch(32% 0.08 25);
+    --color-brand-bg: oklch(90% 0.04 25);
 
-    --divider: 1px solid oklch(84% 0.015 85);
+    --color-accent-block: oklch(88% 0.05 25);
+    --color-accent-block-text: oklch(16% 0.03 25);
+    --color-accent-block-sub: oklch(35% 0.05 25);
+
+    --divider: 1px solid oklch(82% 0.015 85);
 }
 
 /* ========================================
@@ -119,6 +128,7 @@ body {
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 400ms ease, color 300ms ease;
 }
 
 /* ========================================
@@ -252,7 +262,7 @@ body {
 
 .lang-toggle:hover {
     background: var(--color-surface-raised);
-    border-color: var(--color-brand-magenta);
+    border-color: var(--color-brand);
 }
 
 /* Theme toggle */
@@ -433,7 +443,7 @@ body {
 .mobile-menu.active .mobile-link:nth-child(5) { transition-delay: 300ms; }
 
 .mobile-link:hover {
-    color: var(--color-brand-magenta);
+    color: var(--color-brand);
 }
 
 /* ========================================
@@ -527,8 +537,39 @@ body {
 .hero-cta {
     display: flex;
     gap: var(--space-4);
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+/* Hero embedded metrics */
+.hero-metrics {
+    display: flex;
+    gap: var(--space-8);
+    margin-top: var(--space-10);
+    flex-wrap: wrap;
+}
+
+.hero-metric-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+}
+
+.hero-metric-value {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    font-weight: 200;
+    color: var(--color-brand-coral);
+    line-height: 1;
+}
+
+.hero-metric-label {
+    font-family: var(--font-body);
+    font-size: var(--text-caption);
+    font-weight: 400;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 /* ========================================
@@ -553,7 +594,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--color-brand-magenta);
+    background: var(--color-brand);
     color: var(--color-text-primary);
 }
 
@@ -562,8 +603,12 @@ body {
     transform: translateY(-1px);
 }
 
+.btn-primary:active {
+    transform: translateY(1px) scale(0.98);
+}
+
 .btn-primary:focus-visible {
-    outline: 2px solid var(--color-brand-magenta);
+    outline: 2px solid var(--color-brand);
     outline-offset: 2px;
 }
 
@@ -578,8 +623,12 @@ body {
     transform: translateY(-1px);
 }
 
+.btn-ghost:active {
+    transform: translateY(1px) scale(0.98);
+}
+
 .btn-ghost:focus-visible {
-    outline: 2px solid var(--color-brand-magenta);
+    outline: 2px solid var(--color-brand);
     outline-offset: 2px;
 }
 
@@ -594,7 +643,7 @@ body {
 
 .metrics {
     padding: var(--space-20) var(--space-6);
-    background: var(--color-brand-dark);
+    background: var(--color-accent-block);
     border-bottom: none;
 }
 
@@ -612,7 +661,7 @@ body {
     font-family: var(--font-display);
     font-size: var(--text-h1);
     font-weight: 200;
-    color: oklch(96% 0.005 60);
+    color: var(--color-accent-block-text);
     line-height: 1.1;
     margin-bottom: var(--space-2);
 }
@@ -620,20 +669,8 @@ body {
 .metric-label {
     font-family: var(--font-body);
     font-size: var(--text-body-sm);
-    color: oklch(80% 0.02 330);
+    color: var(--color-accent-block-sub);
     font-weight: 400;
-}
-
-[data-theme="light"] .metrics {
-    background: var(--color-brand-magenta);
-}
-
-[data-theme="light"] .metric-number {
-    color: oklch(98% 0.003 90);
-}
-
-[data-theme="light"] .metric-label {
-    color: oklch(85% 0.03 330);
 }
 
 /* ========================================
@@ -721,14 +758,14 @@ body {
 }
 
 .service-card.featured {
-    border-color: var(--color-brand-magenta);
+    border-color: var(--color-brand);
     background: var(--color-surface-raised);
 }
 
 .service-card.featured .service-card-icon {
     width: 56px;
     height: 56px;
-    background: var(--color-brand-magenta);
+    background: var(--color-brand);
     color: var(--color-text-primary);
 }
 
@@ -741,7 +778,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--color-brand-magenta);
+    color: var(--color-brand);
     background: var(--color-brand-bg);
     padding: var(--space-1) var(--space-3);
     border-radius: var(--radius-pill);
@@ -896,6 +933,19 @@ body {
 .work-card-link:nth-child(3) .work-card-visual { --card-solid-color: oklch(16% 0.05 30); }
 .work-card-link:nth-child(4) .work-card-visual { --card-solid-color: oklch(17% 0.05 330); }
 
+[data-theme="light"] .work-card-link:nth-child(1) .work-card-visual { --card-solid-color: oklch(82% 0.04 25); }
+[data-theme="light"] .work-card-link:nth-child(2) .work-card-visual { --card-solid-color: oklch(80% 0.03 300); }
+[data-theme="light"] .work-card-link:nth-child(3) .work-card-visual { --card-solid-color: oklch(84% 0.03 30); }
+[data-theme="light"] .work-card-link:nth-child(4) .work-card-visual { --card-solid-color: oklch(82% 0.03 25); }
+
+[data-theme="light"] .work-card-link:first-child .work-card-gradient {
+    --card-solid-color: oklch(78% 0.05 25);
+}
+
+[data-theme="light"] .work-card-icon svg {
+    stroke: oklch(25% 0.04 25);
+}
+
 /* Project card icon centered in visual */
 .work-card-icon {
     position: absolute;
@@ -913,11 +963,21 @@ body {
     height: 72px;
     stroke: var(--color-text-primary);
     stroke-width: 1.25;
+    transition: transform 500ms cubic-bezier(0.25, 1, 0.5, 1), opacity 400ms ease;
+}
+
+.work-card:hover .work-card-icon svg {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
 
 .work-card-link:first-child .work-card-icon svg {
     width: 88px;
     height: 88px;
+}
+
+.work-card-link:first-child .work-card:hover .work-card-icon svg {
+    transform: scale(1.08);
 }
 
 .work-card-tags {
@@ -993,7 +1053,7 @@ body {
     font-family: var(--font-body);
     font-size: var(--text-body-sm);
     font-weight: 500;
-    color: var(--color-brand-magenta);
+    color: var(--color-brand);
     transition: color 200ms ease;
 }
 
@@ -1094,7 +1154,7 @@ body {
 }
 
 .skills-category:nth-child(1) { border-top-color: var(--color-brand-coral); }
-.skills-category:nth-child(2) { border-top-color: var(--color-brand-magenta); }
+.skills-category:nth-child(2) { border-top-color: var(--color-brand); }
 .skills-category:nth-child(3) { border-top-color: var(--color-brand-violet); }
 .skills-category:nth-child(4) { border-top-color: var(--color-brand-coral); }
 
@@ -1123,14 +1183,20 @@ body {
     border: 1px solid var(--color-border-subtle);
     padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-sm);
-    transition: all 200ms ease;
+    transition: all 250ms cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: default;
 }
 
 .skill-item:hover {
-    background: var(--color-surface-raised);
-    border-color: var(--color-brand-magenta);
-    color: var(--color-text-primary);
-    transform: translateY(-2px);
+    background: var(--color-brand-bg);
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px oklch(50% 0.15 330 / 0.15);
+}
+
+[data-theme="light"] .skill-item:hover {
+    box-shadow: 0 4px 12px oklch(30% 0.15 330 / 0.15);
 }
 
 /* ========================================
@@ -1165,7 +1231,7 @@ body {
 }
 
 .process-step:hover {
-    border-top-color: var(--color-brand-magenta);
+    border-top-color: var(--color-brand);
 }
 
 .process-number {
@@ -1195,20 +1261,8 @@ body {
 }
 
 /* ========================================
-   Tech Stack
+   Tech Grid (inside Skills section)
    ======================================== */
-
-.tech-stack {
-    padding: var(--space-24) var(--space-6);
-    background: var(--color-bg-elevated);
-    border-bottom: var(--divider);
-}
-
-.tech-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    text-align: center;
-}
 
 .tech-grid {
     display: flex;
@@ -1232,7 +1286,7 @@ body {
 
 .tech-item:hover {
     background: var(--color-surface-raised);
-    border-color: var(--color-brand-magenta);
+    border-color: var(--color-brand);
     color: var(--color-text-primary);
 }
 
@@ -1242,7 +1296,7 @@ body {
 
 .connect {
     padding: var(--space-24) var(--space-6);
-    background: var(--color-brand-dark);
+    background: var(--color-accent-block);
     border-bottom: none;
 }
 
@@ -1256,13 +1310,13 @@ body {
     font-family: var(--font-body);
     font-size: var(--text-body);
     font-weight: 300;
-    color: oklch(88% 0.03 330);
+    color: var(--color-accent-block-sub);
     line-height: 1.8;
     margin-bottom: var(--space-8);
 }
 
 .connect-link {
-    color: oklch(95% 0.005 60);
+    color: var(--color-accent-block-text);
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -1287,9 +1341,9 @@ body {
     font-family: var(--font-body);
     font-size: var(--text-body-sm);
     font-weight: 500;
-    color: oklch(95% 0.005 60);
-    background: oklch(0% 0 0 / 0.2);
-    border: 1px solid oklch(70% 0.06 330 / 0.3);
+    color: var(--color-accent-block-text);
+    background: oklch(0% 0 0 / 0.15);
+    border: 1px solid oklch(60% 0.05 25 / 0.35);
     padding: var(--space-3) var(--space-6);
     border-radius: var(--radius-sm);
     text-decoration: none;
@@ -1297,41 +1351,18 @@ body {
 }
 
 .connect-social:hover {
-    background: oklch(0% 0 0 / 0.35);
-    border-color: oklch(85% 0.06 330);
+    background: oklch(0% 0 0 / 0.25);
+    border-color: var(--color-brand-coral);
     transform: translateY(-1px);
 }
 
 .connect-social svg {
-    color: oklch(90% 0.05 330);
+    color: var(--color-brand-coral);
 }
 
-[data-theme="light"] .connect {
-    background: var(--color-brand-magenta);
-}
-
-[data-theme="light"] .connect-text {
-    color: oklch(90% 0.02 330);
-}
-
-[data-theme="light"] .connect-social {
-    color: oklch(98% 0.003 90);
-    background: oklch(0% 0 0 / 0.15);
-    border-color: oklch(80% 0.06 330 / 0.4);
-}
-
-[data-theme="light"] .connect-social:hover {
-    background: oklch(0% 0 0 / 0.25);
-    border-color: oklch(90% 0.08 330);
-}
-
-[data-theme="light"] .connect-social svg {
-    color: oklch(95% 0.05 330);
-}
-
-/* Section tag in connect (on dark bg) */
+/* Section tag in connect (on accent bg) */
 .connect .section-tag {
-    color: oklch(88% 0.06 330);
+    color: var(--color-accent-block-sub);
 }
 
 /* ========================================
@@ -1507,7 +1538,7 @@ body {
 
 [data-theme="light"] .project-tag {
     background: oklch(0% 0 0 / 0.08);
-    color: var(--color-brand-magenta);
+    color: var(--color-brand);
 }
 
 .project-title {
@@ -1835,7 +1866,7 @@ body {
    ======================================== */
 
 :focus-visible {
-    outline: 2px solid var(--color-brand-magenta);
+    outline: 2px solid var(--color-brand);
     outline-offset: 2px;
 }
 
@@ -1847,4 +1878,48 @@ body {
 [data-theme="light"] ::selection {
     background: oklch(70% 0.12 330 / 0.3);
     color: oklch(20% 0.03 85);
+}
+
+/* ========================================
+   Delight: Counter Pulse & Micro-interactions
+   ======================================== */
+
+@keyframes counterPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.metric-number.pulse {
+    animation: counterPulse 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Smooth color transitions for theme-aware elements */
+.nav,
+.hero,
+.metrics,
+.services,
+.work,
+.skills,
+.process,
+.tech-stack,
+.connect,
+.contact,
+.footer,
+.service-card,
+.work-card,
+.work-card-compact,
+.skills-category,
+.mobile-menu {
+    transition: background-color 500ms ease, border-color 400ms ease;
+}
+
+.work-card-visual,
+.project-hero-bg,
+.metric-number,
+.connect-text,
+.connect-social,
+.theme-toggle,
+.lang-toggle {
+    transition: background-color 400ms ease, color 300ms ease;
 }

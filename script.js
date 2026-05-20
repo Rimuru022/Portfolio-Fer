@@ -172,4 +172,22 @@
     });
     
     updateNav();
+    
+    // ── Console easter egg ──
+    console.log(
+        '%c👋 Hey there! %cLike what you see?',
+        'font-size: 1.2em; font-weight: 700; color: #e07090;',
+        'font-size: 1em;'
+    );
+    console.log(
+        '%cFernando Perez Gonzalez %c— Automation & Systems Engineer',
+        'font-weight: 600;',
+        ''
+    );
+    console.log(
+        '%c📧 businesscontact@otomatelabs.com  %c🔗 linkedin.com/in/fernandopgonzalez',
+        'color: #c080d0;',
+        'color: #a0a0c0;'
+    );
+    console.log('%cOpen to remote opportunities and consulting.', 'font-style: italic; color: #888;');
 })();

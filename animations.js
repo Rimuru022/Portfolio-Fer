@@ -87,7 +87,9 @@
             if (progress < 1) {
                 requestAnimationFrame(update);
             } else {
-                el.textContent = target; // Ensure final value is exact
+                el.textContent = target;
+                el.classList.add('pulse');
+                setTimeout(() => el.classList.remove('pulse'), 600);
             }
         }
 
@@ -122,7 +124,7 @@
                 }
 
                 // Handle counter animation
-                if (el.classList.contains('metric-number') && !el.dataset.animated) {
+                if ((el.classList.contains('metric-number') || el.classList.contains('hero-metric-value')) && !el.dataset.animated) {
                     el.dataset.animated = 'true';
                     const target = el.dataset.target || el.textContent;
                     el.dataset.target = target;
