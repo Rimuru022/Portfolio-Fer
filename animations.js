@@ -58,7 +58,13 @@
         const isPercentage = target.includes('%');
         const isMoney = target.includes('$');
         const isPlus = target.includes('+');
-        
+
+        // Ranges like "10-20" shouldn't animate — display statically
+        if (target.includes('-') && !isMoney) {
+            el.textContent = target;
+            return;
+        }
+
         // Extract numeric value
         let numericValue = parseFloat(target.replace(/[^0-9.]/g, ''));
         if (isNaN(numericValue)) numericValue = 0;
