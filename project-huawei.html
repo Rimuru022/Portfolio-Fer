@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente Text-to-SQL Seguro con LLMs — Fernando Perez Gonzalez</title>
+    <title>Asistente Text-to-SQL Seguro con LLMs — Otomate Labs</title>
     <link rel="icon" type="image/png" href="Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,18 +57,21 @@
             <div class="project-main">
                 <h2 data-i18n="project.challenge">The Challenge</h2>
                 <p data-i18n="huawei.ch1">Los clientes corporativos necesitaban democratizar el acceso a los datos alojados en bases de datos relacionales (MySQL, PostgreSQL, GaussDB) para usuarios de negocio que no dominaban el lenguaje SQL.</p>
-                <div class="project-image">Text-to-SQL architecture diagram</div>
                 <p data-i18n="huawei.ch2">El desafío técnico principal no era solo la generación de consultas mediante Inteligencia Artificial, sino garantizar la seguridad absoluta de la base de datos frente a alucinaciones del modelo o inyecciones SQL (SQLi) involuntarias que pudieran alterar o destruir datos críticos en producción.</p>
 
-                <h2 data-i18n="project.built">What I Built</h2>
-                <p data-i18n="huawei.b1">Desarrollé una arquitectura de IA generativa utilizando el modelo Llama 3.1 (8B):</p>
+                <figure class="project-image">
+                    <img src="images/Text-to-SQL Assistant.jpeg" alt="Text-to-SQL AI assistant — natural language to SQL with Zero Trust security" loading="lazy">
+                    <figcaption>Text-to-SQL architecture — Llama 3.1 with RBAC and query parameterization</figcaption>
+                </figure>
+
+                <h2 data-i18n="project.built">What We Built</h2>
+                <p data-i18n="huawei.b1">Desarrollamos una arquitectura de IA generativa utilizando el modelo Llama 3.1 (8B):</p>
                 <ul>
                     <li data-i18n="huawei.b.1">Prompt Engineering avanzado inyectando el esquema de la base de datos y su diccionario de datos como contexto dinámico</li>
                     <li data-i18n="huawei.b.2">Principio de menor privilegio (RBAC): la IA operaba bajo credenciales estrictas de solo lectura (SELECT)</li>
                     <li data-i18n="huawei.b.3">Guardrails de validación y parametrización de consultas antes de su ejecución</li>
                     <li data-i18n="huawei.b.4">Bloqueo de comandos DML y DDL para prevenir modificaciones accidentales</li>
                 </ul>
-                <div class="project-image">Zero Trust security architecture</div>
 
                 <h2 data-i18n="project.results">Results</h2>
                 <p data-i18n="huawei.r1">Se entregó un prototipo funcional en tiempo récord (3 días) con una alta tasa de precisión en la traducción de lenguaje natural a SQL. La arquitectura de seguridad demostró ser robusta, garantizando que ninguna consulta generada por el LLM pudiera ejecutar comandos destructivos.</p>
@@ -91,7 +94,7 @@
                     </div>
                     <div class="project-sidebar-item">
                         <div class="project-sidebar-label" data-i18n="sidebar.role">Role</div>
-                        <div class="project-sidebar-value" data-i18n="huawei.role">Cloud Architect Intern</div>
+                        <div class="project-sidebar-value" data-i18n="huawei.role">Cloud Architect</div>
                     </div>
                     <div class="project-sidebar-item">
                         <div class="project-sidebar-label" data-i18n="sidebar.metric">Key Metric</div>

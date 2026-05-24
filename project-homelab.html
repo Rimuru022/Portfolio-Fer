@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura Zero Trust y Virtualización — Fernando Perez Gonzalez</title>
+    <title>Arquitectura Zero Trust y Virtualización — Otomate Labs</title>
     <link rel="icon" type="image/png" href="Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,11 +57,10 @@
             <div class="project-main">
                 <h2 data-i18n="project.challenge">The Challenge</h2>
                 <p data-i18n="homelab.ch1">Desplegar y administrar múltiples servicios de red, desarrollo y privacidad en un entorno de hardware altamente restringido (4 Cores, 8GB RAM, 70GB Storage), maximizando el rendimiento sin incurrir en costos de suscripción.</p>
-                <div class="project-image">Homelab hardware setup</div>
                 <p data-i18n="homelab.ch2">Además, era imperativo exponer ciertos servicios web a internet sin comprometer la red local abriendo puertos en el router del ISP, mitigando el riesgo de ataques automatizados y escaneos de vulnerabilidades.</p>
 
-                <h2 data-i18n="project.built">What I Built</h2>
-                <p data-i18n="homelab.b1">Implementé un hipervisor de tipo 1 (Proxmox VE) optimizando el uso de recursos:</p>
+                <h2 data-i18n="project.built">What We Built</h2>
+                <p data-i18n="homelab.b1">Implementamos un hipervisor de tipo 1 (Proxmox VE) optimizando el uso de recursos:</p>
                 <ul>
                     <li data-i18n="homelab.b.1">Virtualización mediante contenedores LXC en lugar de máquinas virtuales pesadas</li>
                     <li data-i18n="homelab.b.2">Evadí el hardware del ISP desactivando su servidor DHCP</li>
@@ -69,7 +68,16 @@
                     <li data-i18n="homelab.b.4">Arquitectura Zero Trust Network Access (ZTNA) con Cloudflare Tunnels (cloudflared)</li>
                     <li data-i18n="homelab.b.5">Nginx Proxy Manager para terminación SSL automatizada (Let's Encrypt)</li>
                 </ul>
-                <div class="project-image">Network architecture diagram</div>
+                <div class="project-gallery">
+                    <figure class="project-gallery-item">
+                        <img src="images/Promox 1.png" alt="Proxmox VE dashboard — LXC containers and resource usage" loading="lazy">
+                        <figcaption>Proxmox VE — LXC containers on 4C/8GB hardware</figcaption>
+                    </figure>
+                    <figure class="project-gallery-item">
+                        <img src="images/proxmoxNginxproxymanager.png" alt="Nginx Proxy Manager — SSL termination and reverse proxy" loading="lazy">
+                        <figcaption>Nginx Proxy Manager — automated SSL via Let's Encrypt</figcaption>
+                    </figure>
+                </div>
 
                 <h2 data-i18n="project.results">Results</h2>
                 <p data-i18n="homelab.r1">Se logró una densidad de servicios excepcionalmente alta en hardware limitado sin degradación de rendimiento. La arquitectura de red garantizó privacidad total frente al ISP y bloqueos de telemetría a nivel DNS.</p>
