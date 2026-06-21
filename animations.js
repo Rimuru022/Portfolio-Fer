@@ -59,7 +59,7 @@
         const isMoney = target.includes('$');
         const isPlus = target.includes('+');
 
-        // Ranges like "10-20" shouldn't animate — display statically
+        // Ranges like "10-20" shouldn't animate   display statically
         if (target.includes('-') && !isMoney) {
             el.textContent = target;
             return;

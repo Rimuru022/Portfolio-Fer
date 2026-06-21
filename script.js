@@ -180,7 +180,7 @@
         'font-size: 1em;'
     );
     console.log(
-        '%cFernando Perez Gonzalez %c— Automation & Systems Engineer',
+        '%cFernando Perez Gonzalez %c  Automation & Systems Engineer',
         'font-weight: 600;',
         ''
     );

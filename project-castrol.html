@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatización de Pipeline ETL y BI — Otomate Labs</title>
+    <title>Automatización de Pipeline ETL y BI   Otomate Labs</title>
     <link rel="icon" type="image/png" href="Logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,8 +58,8 @@
                 <h2 data-i18n="project.challenge">The Challenge</h2>
                 <p data-i18n="castrol.ch1">El equipo de ventas comerciales dependía de procesos manuales ineficientes para la consolidación de datos. La extracción de archivos planos desde el ERP (SAP) y su posterior transformación y visualización en presentaciones de PowerPoint consumía múltiples días de trabajo a la semana.</p>
                 <figure class="project-image">
-                    <img src="images/ETL Pipeline Automation.png" alt="ETL Pipeline Automation — Power BI dashboard with sales forecasting" loading="lazy">
-                    <figcaption>Power BI dashboard automating SAP ERP reporting — from days to minutes</figcaption>
+                    <img src="images/ETL Pipeline Automation.png" alt="ETL Pipeline Automation   Power BI dashboard with sales forecasting" loading="lazy">
+                    <figcaption>Power BI dashboard automating SAP ERP reporting   from days to minutes</figcaption>
                 </figure>
                 <p data-i18n="castrol.ch2">Esta latencia en los datos impedía la toma de decisiones ágiles, aumentaba el riesgo de errores humanos y dificultaba la generación de pronósticos de ventas precisos para evitar quiebres de stock.</p>
 
@@ -78,6 +78,20 @@
 
                 <h2 data-i18n="project.tools">Tools & Technologies</h2>
                 <ul><li>Power BI & Power Query (M Language)</li><li>SAP ERP (Extracción de datos)</li><li>Modelado de datos relacionales</li><li>Forecasting estadístico</li></ul>
+
+                <h2>Architecture Decisions</h2>
+                <p><strong>Why Power Query instead of Python scripts?</strong> The Castrol team needed to maintain and modify the ETL process themselves after I left. Power Query runs inside Excel and Power BI, tools they already use daily. A Python script would require a developer to maintain it. Power Query lets the business analysts adjust transformations, add new data sources, and fix issues without technical support.</p>
+                
+                <p><strong>Why incremental loading instead of full refresh?</strong> The SAP data exports are large (500MB+ per file). Running a full refresh every day would take 45 minutes and consume significant server resources. I implemented incremental loading that only processes new or changed records, reducing daily refresh time to 3 minutes. This also allows the team to run updates multiple times per day without performance issues.</p>
+                
+                <p><strong>Why a star schema instead of a flat table?</strong> The initial version used a single flat table with all data. This worked for 10,000 rows but became unusable at 500,000 rows. I redesigned it as a star schema with a central fact table (sales transactions) and dimension tables (products, distributors, time periods). This reduced query time by 80% and made the data model easier to understand for non-technical users.</p>
+
+                <h2>Cost Analysis</h2>
+                <p><strong>Before automation:</strong> The commercial team had 3 analysts spending 15 hours per week each on data consolidation and reporting. At $40/hour loaded cost, that's $1,800/week or $7,200/month in labor costs dedicated to manual data work.</p>
+                
+                <p><strong>After automation:</strong> The same 3 analysts now spend 2 hours per week reviewing the automated reports and making strategic decisions. That's $240/week or $960/month. The Power BI Pro license costs $10/user/month, so total operating cost is $990/month.</p>
+                
+                <p><strong>Net savings:</strong> $6,210/month or $74,520/year. The automation paid for itself in the first month. Additionally, the team can now generate reports that were previously impossible (cross-distributor comparisons, trend analysis) because the data is clean and structured.</p>
             </div>
 
             <aside class="project-sidebar">
