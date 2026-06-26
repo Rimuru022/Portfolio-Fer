@@ -174,16 +174,18 @@ body {
     font-size: var(--text-body);
     font-weight: 300;
     color: var(--color-text-secondary);
-    max-width: 52ch;
+    max-width: var(--max-width);
     line-height: 1.7;
-}
-
-.section-header {
-    margin-bottom: var(--space-12);
 }
 
 .section-header .section-sub {
     margin-top: var(--space-2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header {
+    margin-bottom: var(--space-12);
 }
 
 /* ========================================
@@ -747,8 +749,20 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-6);
+}
+
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .service-card {
